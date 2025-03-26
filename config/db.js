@@ -16,7 +16,13 @@ const connectDB=async()=>
     {
         console.log(`MongoDb connection error ${error.message}`);
         process.exit(1);
-    }  
+    } 
+    
+    
+    finally
+    {
+        console.log("Detabase Connected");
+    }
 }
 
 module.exports=connectDB;
