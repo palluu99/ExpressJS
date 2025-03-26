@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+    <!-- include header here -->
+    <%- include('../partials/header') %>
+
+    <div class="container">
+        <form action="/api/v1//save-register" method="POST">
+            <div class="row">
+                <div class="col-12 text-center mt-1 mb-2">
+                    <h1>Personal Details</h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-md-6 col-12">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="FullName" name="fullname" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-md-6 col-12">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mobile-screen"></i></span>
+                        <input type="text" class="form-control" placeholder="Mobile" name="mobile" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-md-6 col-12">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="text" class="form-control" placeholder="Email" name="email" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-md-6 col-12">
+                    <select class="form-select" aria-label="Select Gender" name="gender">
+                        <option selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="col-3"></div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-md-6 col-12">
+                    <div class="mb-3 mt-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address" placeholder="Address"></textarea>
+                </div>
+            </div>
+                <div class="col-3"></div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-md-3 col-12 mb-2">
+                    <select class="form-select" aria-label="Select country" name="country">
+                        <option selected>Select Country</option>
+                        <option value="India">India</option>
+                        <option value="UK">UK</option>
+                        <option value="US">US</option>
+                      </select>
+                </div>
+    
+                <div class="col-md-3 col-12 mb-2">
+                    <select class="form-select" aria-label="Select state" name="state">
+                        <option selected>Select State</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Great Britain">Great Britain</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Callfornia">Callfornia</option>
+                      </select>
+                </div>
+                <div class="col-3"></div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="d-flex justify-content-center align-items-center flex-column flex-md-row  col-12 gap-3">
+                    <button type="submit" class="btn btn-warning"><i class="bi bi-send-fill"></i>Submit</button>
+                    <button type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i>Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- include footer here -->
+    <%- include('../partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

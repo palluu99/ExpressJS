@@ -1,0 +1,23 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 80%;
+    min-height: auto;
+    border: 1px solid #000;
+    margin: auto;
+}
+.photo-img
+{
+    width: 100%;
+    height: auto;
+}
+.photo-img img
+{
+    width: 100%;
+    height: auto;
+}

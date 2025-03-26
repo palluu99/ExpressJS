@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+</head>
+<body onload="loadCursor()">
+    <!-- include here header -->
+     <%- include("../partials/header")%>
+     
+     <div class="container p-4">
+        <div class="row">
+            <div class="col-12">
+                <!-- <h2>Contact Us</h2> -->
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 col-12">
+                <h3 class="text-bg-dark text-white p-2 text-center">Get In Touch with us</h3>
+                <div class="row">
+                       <div class="col-md-6 d-flex flex-column align-items-center justify-content-center mt-2">
+                        <i class="fa-solid fa-phone fs-1"></i>
+                        <h5>Phone Number</h5>
+                        <p>+91-9822995500</p>
+                       </div>
+                    
+                       <div class="col-md-6 d-flex flex-column align-items-center justify-content-center mt-2">
+                        <i class="fa-solid fa-envelope fs-1"></i>
+                        <h5>Email</h5>
+                        <p>companyname@gmail.com</p>
+                       </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center mt-2">
+                        <i class="fa-solid fa-location-dot fs-1"></i>
+                        <h5>Location</h5>
+                        <p class="text-center">Mumbai-Banglore express highway<br>Warje -410011, Pune</p>
+                        
+                       </div>
+                       <div class="col-md-6 d-flex flex-column align-items-center justify-content-center mt-2">
+                        <i class="fa-solid fa-clock fs-1"></i>
+                        <h5>Working Hours</h5>
+                        <p class="text-center">Monday - Friday 
+                        <br> 09:00AM t0 06:00PM
+                        </p>
+                       </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+                <h3 class="text-bg-dark text-white p-2 text-center">Contact us</h3>
+
+
+                <form action="/api/v1/save-contact" method="POST">
+                <div class="row">
+                  <div class="col-md-6 col-12">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                      <input type="text" class="form-control" id="fname" name="firstname" placeholder="FirstName" aria-label="Username" aria-describedby="addon-wrapping" required>
+                  </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text ms-1" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" id="lname" name="lastname" placeholder="LastName" aria-label="Username" aria-describedby="addon-wrapping" required>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-phone"></i></span>
+                  <input type="text" class="form-control" id="mob" name="mobile" placeholder="Mobile No" aria-label="Username" aria-describedby="addon-wrapping"  onkeypress="return isNumber(event)">
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="input-group mb-3">
+                  <span class="input-group-text ms-1" id="addon-wrapping"><i class="fa-solid fa-envelope"></i></span>
+                  <input type="text" class="form-control" id="email" name="email" placeholder="EmailID" aria-label="Username" aria-describedby="addon-addon1" onchange="return validateEmail(this)">
+                </div>
+              </div>
+            </div>
+           
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-3">
+                  <textarea class="form-control" id="msg" name="message" rows="3" itemid="msg" placeholder="Message" style="resize: none;"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="d-flex justify-content-center align-items-center flex-column flex-md-row gap-3 col-12">
+                <button type="submit" class="btn btn-primary" id="btnsubmit"><i class="bi bi-send-fill"></i>Submit</button>
+                <button type="button" class="btn btn-danger" id="btnclear"><i class="bi bi-trash-fill"></i>Clear</button>
+              </div>
+
+              <div class="col-md-6 col-12"> </div>
+            </div>
+            </form>
+            </div>
+            </div>
+     </div>
+    
+    <!-- include here footer -->
+     <%- include('../partials/footer') %>
+
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+     <script src="/js/script.js" type="text/javascript"></script>
+</body>
+</html>
+
